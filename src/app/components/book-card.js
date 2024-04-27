@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -6,10 +7,12 @@ const BookCard = ({ book }) => {
   return (
     <div className="w-full max-w-sm bg-white border border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
-        <img
-          className=" rounded-t-lg w-full h-[250px] object-cover"
+        <Image
+          className=" rounded-t-lg w-full object-cover"
           src={`/uploads/${book.coverImage}`}
           alt="product image"
+          height={80}
+          width={80}
         />
       </a>
       <div className="p-5">

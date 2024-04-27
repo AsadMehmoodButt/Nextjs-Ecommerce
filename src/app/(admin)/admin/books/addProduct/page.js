@@ -3,6 +3,7 @@ import { ProductSchema } from "@/app/form-schema/add-productSchema";
 import { useGetCategoryQuery } from "@/app/redux/api/category/category";
 import { useCreateProductMutation } from "@/app/redux/api/product/product";
 import { useFormik } from "formik";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -164,7 +165,7 @@ const Page = () => {
                     onChange={handleFileChange}
                   />
                   <div>
-                    <img src={avatarPreview} width={80} alt="" />
+                    <Image src={avatarPreview} width={80} height={60} alt="" />
                   </div>
                 </div>
               </div>

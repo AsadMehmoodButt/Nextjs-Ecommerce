@@ -1,5 +1,6 @@
 "use client";
 import { useGetProductDetailQuery } from "@/app/redux/api/product/product";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
@@ -14,8 +15,8 @@ const Page = () => {
         <>
           {" "}
           {[...new Array(1)].map((p, index) => (
-            <div className="w-full flex flex-wrap justify-center">
-              <article key={index} className="skeleton-card w-full">
+            <div className="w-full flex flex-wrap justify-center" key={index}>
+              <article className="skeleton-card w-full">
                 <div className="skeleton skeleton-card-img"></div>
                 <div className="skeleton-card-text">
                   <h2 className="skeleton skeleton-card-title"></h2>
@@ -35,10 +36,12 @@ const Page = () => {
           <div className="px-[15%] flex flex-1 pt-16">
             <div className="w-full  flex flex-1 bg-slate-100  rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                <img
-                  className=" rounded-t-lg flex-1 w-full h-[250px] object-cover"
+                <Image
+                  className=" rounded-t-lg flex-1 w-full object-cover"
                   src={`/uploads/${product?.coverImage}`}
                   alt="product image"
+                  height={80}
+                  width={80}
                 />
               </a>
               <div className="p-5">
