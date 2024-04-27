@@ -7,8 +7,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-const page = () => {
-  const [register, { data }] = useRegisterMutation();
+const Page = () => {
+  const [register] = useRegisterMutation();
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -131,4 +131,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -150,7 +150,7 @@ const Page = () => {
                       select category
                     </option>
                     {data?.map((categ, i) => (
-                      <option>{categ.title}</option>
+                      <option key={i}>{categ.title}</option>
                     ))}
                   </select>
                 </div>

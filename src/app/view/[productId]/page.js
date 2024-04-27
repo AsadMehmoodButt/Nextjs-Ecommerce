@@ -3,7 +3,7 @@ import { useGetProductDetailQuery } from "@/app/redux/api/product/product";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   const params = useParams();
   const id = params.productId;
   const { data: product, isLoading, isError } = useGetProductDetailQuery(id);
@@ -77,4 +77,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
