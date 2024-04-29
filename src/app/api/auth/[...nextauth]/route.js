@@ -6,6 +6,7 @@ import { Account, User as AuthUser } from "next-auth";
 import Connectdbs from "@/app/config/db-conn";
 import User from "@/app/models/user";
 import bcrypt from "bcryptjs";
+console.log("fnelfnwefwelfnn ",process.env.GITHUB_CLIENT_ID);
 
 export const authOptions = {
   // Configure one or more authentication providers
