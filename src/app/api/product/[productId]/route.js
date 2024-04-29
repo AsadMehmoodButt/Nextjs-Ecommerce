@@ -16,7 +16,6 @@ export async function GET(_, { params }) {
   ConnectDb();
   try {
     const id = params.productId;
-    console.log("this is single data id ", id);
     const response = await Product.findById(id);
     return NextResponse.json(response);
   } catch (error) {
