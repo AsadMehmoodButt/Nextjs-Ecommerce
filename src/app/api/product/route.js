@@ -7,6 +7,7 @@ import Categor from "@/app/models/category";
 export const POST = async (req) => {
   ConnectDb();
   try {
+    console.log("this is test ");
     const data = await req.formData();
     const coverImage = data.get("cover_image");
     const title = data.get("title");
@@ -15,6 +16,9 @@ export const POST = async (req) => {
     const author = data.get("author");
     const description = data.get("description");
     const categoryName = data.get("category");
+
+    console.log("these are products ", title);
+    console.log("these are products ", price);
 
     // Find the corresponding category document by name
     const category = await Categor.findOne({ title: categoryName });
@@ -45,7 +49,7 @@ export const POST = async (req) => {
     });
   } catch (error) {
     console.log("Error:", error);
-    return NextResponse.json({ error: "Internal server error" });
+    return NextResponse.json({ error: error });
   }
 };
 

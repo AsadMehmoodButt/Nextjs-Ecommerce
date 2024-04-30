@@ -9,6 +9,7 @@ export const Product = createApi({
   endpoints: (builder) => ({
     createProduct: builder.mutation({
       query: (data) => {
+        console.log("this is entered data ",data);
         return {
           url: "/api/product",
           method: "POST",
@@ -19,7 +20,7 @@ export const Product = createApi({
     }),
     getProduct: builder.query({
       query: () => ({
-        url: "/api/product",
+        url: "/api/product/",
         method: "GET",
       }),
       providesTags: ["product"],
