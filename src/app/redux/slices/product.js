@@ -9,7 +9,6 @@ export const productSlice = createSlice({
   },
   reducers: {
     getProductSuccess: (state, action) => {
-      console.log("this is action ", action);
       state.status = "succeeded";
       state.products = action.payload;
     },

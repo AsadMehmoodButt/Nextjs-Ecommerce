@@ -7,8 +7,7 @@ import { useParams } from "next/navigation";
 const Page = () => {
   const params = useParams();
   const id = params.productId;
-  const { data: product, isLoading, isError } = useGetProductDetailQuery(id);
-  console.log("these are product", product);
+  const { data: product, isLoading } = useGetProductDetailQuery(id);
   return (
     <>
       {isLoading ? (

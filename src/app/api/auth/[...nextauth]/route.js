@@ -2,11 +2,9 @@ import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { Account, User as AuthUser } from "next-auth";
 import Connectdbs from "@/app/config/db-conn";
 import User from "@/app/models/user";
 import bcrypt from "bcryptjs";
-console.log("fnelfnwefwelfnn ",process.env.GITHUB_CLIENT_ID);
 
 export const authOptions = {
   // Configure one or more authentication providers

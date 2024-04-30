@@ -10,7 +10,7 @@ export const category = createApi({
   endpoints: (builder) => ({
     createCategory: builder.mutation({
       query: (newCategory) => ({
-        url: "api/categories",
+        url: "/api/categories",
         method: "POST",
         body: newCategory,
       }),
@@ -18,7 +18,7 @@ export const category = createApi({
     }),
     getCategory: builder.query({
       query: () => ({
-        url: "api/categories",
+        url: "/api/categories",
         method: "GET",
       }),
       providesTags: ["category"],
