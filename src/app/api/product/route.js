@@ -29,7 +29,7 @@ export const POST = async (req) => {
 
     const byteData = await coverImage.arrayBuffer();
     const buffer = Buffer.from(byteData);
-    const path = `./public/uploads/${coverImage.name}`;
+    const path = `/uploads/${coverImage.name}`;
     await writeFile(path, buffer);
 
     const response = await product.create({
