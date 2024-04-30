@@ -5,16 +5,14 @@ import React from "react";
 
 const BookCard = ({ book }) => {
   return (
-    <div className="w-full max-w-sm bg-white border border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <Image
-          className=" rounded-t-lg w-full object-cover"
-          src={`/uploads/${book.coverImage}`}
-          alt="product image"
-          height={80}
-          width={80}
-        />
-      </a>
+    <>
+      <Image
+        src={`/uploads/${book.coverImage}`}
+        className=" rounded-t-lg w-full object-cover"
+        alt="product image"
+        height={80}
+        width={80}
+      />
       <div className="p-5">
         <a href="#">
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white truncate capitalize">
@@ -43,7 +41,7 @@ const BookCard = ({ book }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

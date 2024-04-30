@@ -80,33 +80,34 @@ const Home = () => {
           {productLoading ? (
             <>
               {[...new Array(10)].map((p, index) => (
-                <>
-                  <div
-                    className="w-full flex flex-wrap"
-                    style={{ width: "1400px" }}
-                  >
-                    <article
-                      key={index}
-                      className="skeleton-card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4"
-                    >
-                      <div className="skeleton skeleton-card-img"></div>
-                      <div className="skeleton-card-text">
-                        <h2 className="skeleton skeleton-card-title"></h2>
-                        <h4 className="skeleton skeleton-card-brand"></h4>
-                        <p className="skeleton skeleton-card-description"></p>
-                        <div className="flex items-center justify-between mt-2">
-                          <p className="skeleton skeleton-card-price"></p>
-                          <p className="skeleton skeleton-card-rating"></p>
-                        </div>
+                <div
+                  className="w-full flex flex-wrap"
+                  style={{ width: "1400px" }}
+                  key={index}
+                >
+                  <article className="skeleton-card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4">
+                    <div className="skeleton skeleton-card-img"></div>
+                    <div className="skeleton-card-text">
+                      <h2 className="skeleton skeleton-card-title"></h2>
+                      <h4 className="skeleton skeleton-card-brand"></h4>
+                      <p className="skeleton skeleton-card-description"></p>
+                      <div className="flex items-center justify-between mt-2">
+                        <p className="skeleton skeleton-card-price"></p>
+                        <p className="skeleton skeleton-card-rating"></p>
                       </div>
-                    </article>
-                  </div>
-                </>
+                    </div>
+                  </article>
+                </div>
               ))}
             </>
           ) : (
             productData?.map((book, index) => (
-              <BookCard key={index} book={book} />
+              <div
+                className="w-full max-w-sm bg-white border border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                key={book._id}
+              >
+                <BookCard book={book} />
+              </div>
             ))
           )}
         </div>

@@ -165,7 +165,14 @@ const Page = () => {
                     onChange={handleFileChange}
                   />
                   <div>
-                    <Image src={avatarPreview} width={80} height={60} alt="" />
+                    {avatarPreview && (
+                      <Image
+                        src={avatarPreview}
+                        width={80}
+                        height={60}
+                        alt="avatar"
+                      />
+                    )}{" "}
                   </div>
                 </div>
               </div>
